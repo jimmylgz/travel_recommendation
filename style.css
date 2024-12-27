@@ -1,0 +1,58 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav {
+    background-color: #f0f0f0;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo a {
+    color: white;
+    text-decoration: none;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+}
+
+#conditionInput {
+    width: 300px;
+}
+
+body {
+    text-align: center;
+    background-image: url("./travel_back.jpg");
+    background-size: cover;
+}
+
+h1 {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.social_media {
+    margin-top: 50px;
+    justify-content: center;
+}
+
+.staff_list {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    list-style-type: none;
+}

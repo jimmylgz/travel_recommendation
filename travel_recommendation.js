@@ -1,4 +1,5 @@
 const btnSearch = document.getElementById("btnSearch");
+const btnClear = document.getElementById("btnClear");
 
 function searchDestination() {
     const input = document.getElementById('conditionInput').value.toLowerCase();
@@ -21,9 +22,11 @@ function searchDestination() {
             case "countries":
                 // console.log(data.countries);
                 for (const country of data.countries) {
-                    resultDiv.innerHTML += `<img src="${country.imageUrl}" alt="country_photo">`;
-                    resultDiv.innerHTML += `<h2>${country.cities.name}</h2>`;
-                    resultDiv.innerHTML += `<p>${country.cities.description}</p>`
+                    for (const city of country.cities) {
+                        resultDiv.innerHTML += `<img src="${city.imageUrl}" alt="country_photo">`;
+                        resultDiv.innerHTML += `<h2>${city.name}</h2>`;
+                        resultDiv.innerHTML += `<p>${city.description}</p>`;
+                    }    
                 }
                 break;
             case "temple":
@@ -40,3 +43,10 @@ function searchDestination() {
 }
 
 btnSearch.addEventListener("click", searchDestination);
+
+function clearSearch() {
+    const resultDiv = document.getElementById('result');
+    resultDiv.innerHTML = "";
+}
+
+btnClear.addEventListener("click", clearSearch);
